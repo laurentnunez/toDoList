@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>toDoList</title>
+<?php require 'inc/header.tpl.php'?>
+<?php require 'data.php' ?>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1 class="text-center text-bg-primary">toDoList</h1>
-      <?php
-      //Voici la liste des tâches
-      $taches = ["acheter du pain", "faire une machine", "arroser les fleurs", "ranger la bibliothèque", "laver la voiture"];
-      $nbeTaches = count($taches);
-      ?>
+<!--On compte le nombre de tâches dans le tableau-->
+<?php $nbeTaches = count($taches); ?>
+
     <form method="get">
       <div class="container ">
         <div class="row justify-content-center m-auto">
-          <div class="col-2">
+          <div class="col-2"> 
           <span class="badge text-bg-primary"><?= $nbeTaches?></span>
           </div>
           <div class="col-8">
@@ -34,22 +24,17 @@
       <table class="table">
         <thead>
         </thead>
-        <tbody>      
-        <?php
-          //On parcourt la liste des tâches grâce à la boucle foreach
-          foreach ($taches as $tache) {
-        ?> 
+        <tbody>
+
+        <!--On parcourt la liste des tâches grâce à la boucle foreach-->
+        <?php foreach ($taches as $tache) { ?>
+
           <!--On affiche les taches dans une liste--> 
           <tr >
-            
-            
             <td ><?= $tache ?></td>
             <td ><button class="btn btn-outline-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Suppr</button></td>
-            
           </tr>
-        <?php
-        }
-        ?>
+        <?php } ?>
         </tbody>
       </table>
     </div> 
@@ -60,11 +45,10 @@
     $nbeTaches = count($taches);
     echo '<p>Il y a ' . $nbeTaches . ' tâche(s) à faire.</p>';
 
-    
+    //On affiche la tâche qui vient d'être ajouter
+    //Attention, pour l'instant, elle ne s'affiche pas dans liste des tâches précédantes !
     var_dump($_GET["newtask"]);
     
     ?>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>  
-  </body> 
-</html>
+ <?php require 'inc/footer.tpl.php'?>
