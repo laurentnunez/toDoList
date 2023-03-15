@@ -24,9 +24,12 @@
         <!--On parcourt la liste des tâches grâce à la boucle foreach-->
         <?php foreach ($taches as $tache) { ?>
           <!--On affiche les taches dans une liste-->   
-          <div class="alert alert-light" role="alert">
+          <div class="alert alert-light d-flex justify-content-between" role="alert" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
             <?= $tache ?>
-            <button class="btn btn-outline-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">X</button>
+            <div class="buttons d-flex justify-content-end">
+              <button class="btn btn-outline-info" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Ok</button>
+              <button class="btn btn-outline-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">X</button>
+            </div>
           </div>
 
         <?php } ?>
