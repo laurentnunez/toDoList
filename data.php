@@ -5,7 +5,9 @@
     "faire une machine",
     "arroser les fleurs",
     "ranger la bibliothèque",
-    "laver la voiture"
+    "laver la voiture",
+    "passer le balais",
+    "aller courir un peu quand même",
   ];
 
 ?>
