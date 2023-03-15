@@ -12,4 +12,4 @@
   </head>
   <body>
     <div class="main-section bg-dark">
-      <h1 class="text-info text-center" style="font-weight:lighter ; font-family:'Pacifico', cursive" >toDoList</h1>
+      <h1 class="text-info text-center" style="font-weight:lighter ; font-size:50px ; font-family:'Pacifico', cursive" >toDoList</h1>

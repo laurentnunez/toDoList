@@ -3,7 +3,7 @@
   background-color: rgb(248, 248, 248);
   border-radius: 8px;
   padding: 2rem 1rem 1rem 1rem;
-  margin: 1rem 5rem 2rem 5rem;
+  margin: 1rem 8rem 2rem 8rem;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;;
 }
 
@@ -23,7 +23,7 @@
   }
 
   .task {
-    font-size: 12px;
+    font-size: 14px;
   }
 
 }
