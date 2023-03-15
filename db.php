@@ -1,7 +1,7 @@
 
-//*Connexion à la base de données
-<?php
 
+<?php
+//Connexion à la base de données
   //On indique le Data Source Name pour nous permettre de se connecter à la base de données
    $dataSourceName = "mysql:dbname=mytodolist;host=localhost;charset=UTF8";
 
