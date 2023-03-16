@@ -21,4 +21,5 @@
       die("ça n'a pas marché :(");
     };
   
+    header("Location: index.php");
 ?>

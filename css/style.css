@@ -16,8 +16,30 @@
   align-items: center;
 }
 
-
 @media screen and (max-width:1200px){
+  .tasks_container , .add-task-container , .tasks-counter {
+  margin: 1rem 10rem 1rem 10rem;
+  }
+
+  .task {
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (max-width:798px){
+  .tasks_container , .add-task-container , .tasks-counter {
+  margin: 1rem 5rem 1rem 5rem;
+  }
+
+  .task {
+    font-size: 14px;
+  }
+
+}
+
+
+@media screen and (max-width:480px){
   .tasks_container , .add-task-container , .tasks-counter {
   margin: 1rem 0.5rem 1rem 0.5rem;
   }
