@@ -2,6 +2,6 @@
   </div>
 </body>
 <footer>
- <p class="mt-2" style="font-style: italic; font-weight: bold; text-align: right" >Developped by Laurent</p>
+ <p class="mt-2" style="font-style: italic; font-weight: bold; text-align: right" >Developped by Laurent &copy; 2023</p>
 </footer> 
 </html>
