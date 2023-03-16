@@ -11,3 +11,14 @@
   ];
 
 ?>
+
+<?php
+//AJOUTER UNE TACHE DANS LA BASE DE DONNÉES   
+
+   
+
+  
+
+   echo("La tâche a été ajoutée !");
+  
+?>

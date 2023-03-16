@@ -1,8 +1,6 @@
 
 <?php
-//AJOUTER UNE TACHE DANS LA BASE DE DONNÉES
-
-   
+//AJOUTER UNE TACHE DANS LA BASE DE DONNÉES  
 
     $name= strip_tags($_POST["newtask"]);
     $active = 1;
