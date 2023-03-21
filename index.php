@@ -30,7 +30,10 @@
             <?php } else { ?>
             
               <div class="task-data">
-                <input class="custom-control-input" method="post" type="checkbox" name="checkbox" action="inc/update.php" style="width:2rem; height:1.5rem;">
+                <input class="custom-control-input" method="post" type="checkbox" name="checkbox" action="inc/checkboxUpdate.php" style="width:2rem; height:1.5rem;">
+
+                
+
                 <?php $id=$taskData['id']; 
               //*var_dump ($id);
             ?>
@@ -38,8 +41,11 @@
               </div>
               
             <?php $taskCounter++; } ?>
-            
+
             <div class="buttons d-flex justify-content-around">
+
+            <a class="btn btn-outline-info"  type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=checked" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">V</a>
+
               <a class="btn btn-outline-danger"  type="submit" href="inc/delete.php?id=<?= $taskData['id']?>" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">X</a>
             </div>
             </form>
