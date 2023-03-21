@@ -6,7 +6,7 @@
   <div class="add-task-container">
     <form class="col-12 d-flex justify-content-between"  method="post" autocomplet="off" action="inc/add.php">
         <div class="col-10">
-          <input type="text" placeholder="ajouter une tâche"  name="newtask" class="form-control">
+          <input type="text" placeholder="ajouter une tâche" name="newtask" class="form-control">
         </div>
         <div class="col-1">
           <button type="submit" class="btn btn-info" style="font-size:16px;"><span>&#43;</span></button>
@@ -40,7 +40,7 @@
             <?php $taskCounter++; } ?>
             
             <div class="buttons d-flex justify-content-around">
-              <button class="btn btn-outline-danger" method="post" type="submit" name="delete" action="inc/delete.php" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">X</button>
+              <a class="btn btn-outline-danger"  type="submit" href="inc/delete.php?id=<?= $taskData['id']?>" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">X</a>
             </div>
             </form>
         <?php } ?>

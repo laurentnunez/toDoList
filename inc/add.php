@@ -2,14 +2,12 @@
 <?php
 //AJOUTER UNE TACHE DANS LA BASE DE DONNÉES  
 
-  if(!empty($_POST)){
-
+  if(!empty($_POST["newtask"])){
 
     if(isset($_POST["newtask"])){
 
       $name= strip_tags($_POST["newtask"]);
       $active = 1;
-
 
       require '../inc/connect.php';
       $sql = "INSERT INTO `tasks` (`name`,`status`) VALUES (:title , :active)"; 
@@ -28,11 +26,13 @@
 
      header("Location: ../index.php");
 
-    }else {
+    }
+    else {
+
       die("Le formulaire est vide");
     }
+  
   }
-
     
 
     
