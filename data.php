@@ -10,15 +10,11 @@
     "aller courir un peu quand même",
   ];
 
-?>
 
-<?php
-//AJOUTER UNE TACHE DANS LA BASE DE DONNÉES   
 
-   
+  require 'inc/connect.php';
 
-  
+  $sql = "UPDATE `tasks` , SET `status`= 2 , WHERE=$id "; 
 
-   echo("La tâche a été ajoutée !");
-  
+
 ?>

@@ -1,9 +1,10 @@
 <?php require 'inc/header.php'?>
 <?php require 'inc/connect.php' ?>
-<?php require 'list.php' ?>
+<?php require 'inc/list.php' ?>
+<?php require 'inc/add.php' ?>
 
   <div class="add-task-container">
-    <form class="col-12 d-flex justify-content-between"  method="post" autocomplet="off" action="add.php">
+    <form class="col-12 d-flex justify-content-between"  method="post" autocomplet="off" action="inc/add.php">
         <div class="col-10">
           <input type="text" placeholder="ajouter une tâche"  name="newtask" class="form-control">
         </div>
@@ -18,7 +19,7 @@
         <?php foreach ($tasksList as $taskData) { ?>
           
           <!--On affiche les taches dans une liste-->   
-          <div class="task alert alert-light d-flex justify-content-between" role="alert" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+          <form class="task alert alert-light d-flex justify-content-between" role="alert" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
 
           <?php 
             if($taskData['status']== 2){?>
@@ -29,16 +30,19 @@
             <?php } else { ?>
             
               <div class="task-data">
-                <input class="custom-control-input" type="checkbox" style="width:2rem; height:1.5rem;">
+                <input class="custom-control-input" method="post" type="checkbox" name="checkbox" action="inc/update.php" style="width:2rem; height:1.5rem;">
+                <?php $id=$taskData['id']; 
+              //*var_dump ($id);
+            ?>
                 <label class="custom-control-label" for="customCheck1"><?= $taskData['name'] ?></label>
               </div>
               
             <?php $taskCounter++; } ?>
             
             <div class="buttons d-flex justify-content-around">
-              <button class="btn btn-outline-danger" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">X</button>
+              <button class="btn btn-outline-danger" method="post" type="submit" name="delete" action="inc/delete.php" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">X</button>
             </div>
-          </div>
+            </form>
         <?php } ?>
       </div>
       <div class="tasks-counter">           
