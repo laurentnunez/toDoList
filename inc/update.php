@@ -4,6 +4,7 @@
 
  if($_GET["action"]=== "checked") {
 
+
     $sql = "UPDATE `tasks` SET `status`= 2 WHERE `id`= :id";
 
     $query = $pdo->prepare($sql);

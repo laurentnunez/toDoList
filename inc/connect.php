@@ -5,8 +5,8 @@
    $dataSourceName = "mysql:dbname=mytodolist;host=localhost;charset=UTF8";
 
   //On met dans des variables le login et le mot de passe
-   $user = 'explorateur';
-   $password = 'Ereul9Aeng';
+   $user = 'mytodolist';
+   $password = 'lemotdepasse';
 
   //On crée la connexion en MySQL et PHP avec PDO
   //On instancie la classe PDO (qui représente la connexion)

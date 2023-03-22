@@ -1,3 +1,6 @@
 <?php
- var_dump ($_POST["checkbox"]);
+
+if ($_GET["action"]=== "nochecked") {
+    var_dump($_GET);
+}
 ?>

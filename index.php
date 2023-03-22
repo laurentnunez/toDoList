@@ -3,6 +3,8 @@
 <?php require 'inc/list.php' ?>
 <?php require 'inc/add.php' ?>
 
+
+
   <div class="add-task-container">
     <form class="col-12 d-flex justify-content-between"  method="post" autocomplet="off" action="inc/add.php">
         <div class="col-10">
@@ -15,6 +17,7 @@
   </div>
       <div class="tasks_container ">
       <?php $taskCounter=0 ?>
+
         <!--On parcourt la liste des tâches venant de la bdd grâce à la boucle foreach-->
         <?php foreach ($tasksList as $taskData) { ?>
           
@@ -24,35 +27,30 @@
           <?php 
             if($taskData['status']== 2){?>
               <div class="task-data">
-                <input class="custom-control-input" type="checkbox" checked style="width:2rem; height:1.5rem;">
-                <label class="custom-control-label checked" for="customCheck1"><?= $taskData['name'] ?></label>
+                <input class="custom-control-input" type="checkbox" value="checked" name="checkbox" checked style="width:2rem; height:1.5rem;">
+                <label class="custom-control-label checked" style="white-space:pre-wrap;" for="customCheck1"><?= $taskData['name'] ?></label>
               </div>
+
             <?php } else { ?>
             
               <div class="task-data">
-                <input class="custom-control-input" method="post" type="checkbox" name="checkbox" action="inc/checkboxUpdate.php" style="width:2rem; height:1.5rem;">
-
-                
-
-                <?php $id=$taskData['id']; 
-              //*var_dump ($id);
-            ?>
-                <label class="custom-control-label" for="customCheck1"><?= $taskData['name'] ?></label>
+                <input class="custom-control-input" type="checkbox" method="post"  value="nochecked" name="checkbox"  style="width:2rem; height:1.5rem;">
+                <label class="custom-control-label" style="white-space:pre-wrap;" for="customCheck1"><?= $taskData['name'] ?></label>
               </div>
               
-            <?php $taskCounter++; } ?>
+      <?php $taskCounter++; } ?>
 
             <div class="buttons d-flex justify-content-around">
 
-            <a class="btn btn-outline-info"  type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=checked" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">V</a>
+              <a class="btn btn-outline-info"  type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=checked" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">V</a>
 
               <a class="btn btn-outline-danger"  type="submit" href="inc/delete.php?id=<?= $taskData['id']?>" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">X</a>
             </div>
-            </form>
+          </form>
         <?php } ?>
       </div>
       <div class="tasks-counter">           
-        <span class="badge text-bg-warning">Il y a <?=$taskCounter ?> tâche(s) à faire</span>
+        <span class="badge text-bg-warning"><?=$taskCounter ?></span>
       </div>
        
  <?php require 'inc/footer.php'?>

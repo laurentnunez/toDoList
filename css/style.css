@@ -7,13 +7,13 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
+
 .tasks-counter{
   position:fixed;
-  bottom:0px;
-  width:100%;
-  background-color: rgb(248, 248, 248);
-  padding: 1rem 1rem 1rem 1rem;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  top:0px;
+  right: 1rem;
+  width:30%;
+  background-color: transparent;
 }
 
 .task {
@@ -25,8 +25,8 @@
   align-items: center;
 }
 
-@media screen and (max-width:1200px){
-  .tasks_container , .add-task-container  {
+@media screen and (max-width:1500px){
+  .tasks_container , .add-task-container {
   margin: 1rem 10rem 1rem 10rem;
   }
 
@@ -45,11 +45,15 @@
     font-size: 14px;
   }
 
+  .tasks-counter{
+    right: -5rem;
+  }
+
 }
 
 
 @media screen and (max-width:480px){
-  .tasks_container , .add-task-container  {
+  .tasks_container , .add-task-container {
   margin: 1rem 0.5rem 1rem 0.5rem;
   }
 
