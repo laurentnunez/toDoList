@@ -7,12 +7,11 @@
 
   <div class="add-task-container">
     <form class="col-12 d-flex justify-content-center"  method="post" autocomplet="off" action="inc/add.php">
-        <div class="col-10">
-          <input type="text" placeholder="ajouter une tâche" name="newtask" class="form-control mr-1">
-        </div>
-        <div class="col-1">
-          <button type="submit" class="btn btn-info" style="font-size:15px; color:white; font-weight:bold;"><span>&#43;</span></button>
-        </div>
+        
+          <input type="text" placeholder="ajouter une tâche" name="newtask" class="form-control">
+        
+          <button type="submit" class="btn btn-info ms-1" style="font-size:15px; color:white; font-weight:bold;"><span>&#43;</span></button>
+        
     </form>
   </div>
       <div class="tasks_container">
