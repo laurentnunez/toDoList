@@ -11,5 +11,5 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   </head>
   <body>
-    <div class="main-section bg-info" style="min-height:100vh">
-      <h1 class="text-white text-center" style="font-weight:lighter ; font-size:50px ; font-family:'Pacifico', cursive" >toDoList</h1>
+    <div class="main-section bg-info" style="min-height:90vh">
+      <h1 class="text-white text-center pt-2" style="font-weight:lighter ; font-size:50px ; font-family:'Pacifico', cursive" >toDoList</h1>
