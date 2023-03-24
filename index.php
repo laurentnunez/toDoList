@@ -52,5 +52,6 @@
       <div class="tasks-counter">           
         <span class="badge text-bg-warning" style="font-size:16px;"><?=$taskCounter ?></span>
       </div>
-       
+
+  
  <?php require 'inc/footer.php'?>
