@@ -14,6 +14,20 @@
       };
     header("Location: ../index.php");
 
+ }else{
+  if($_GET["action"]=== "nochecked") {
+
+
+    $sql = "UPDATE `tasks` SET `status`= 1 WHERE `id`= :id";
+
+    $query = $pdo->prepare($sql);
+    $query->bindParam(":id", $_GET["id"]);
+    if(!$query->execute()){
+        die("ça n'a pas marché :(");
+      };
+    header("Location: ../index.php");
+
+ }
  }
         
 ?>

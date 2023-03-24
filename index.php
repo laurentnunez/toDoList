@@ -30,18 +30,24 @@
                 <label class="custom-control-label checked" style="white-space:pre-wrap;" for="customCheck1"><?= $taskData['name'] ?></label>
               </div>
 
+              <div class="buttons d-flex justify-content-around">
+
+              <a class="btn btn-outline-info"  type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=nochecked" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">O</a>
+
             <?php } else { ?>
             
               <div class="task-data">
                 
                 <label class="custom-control-label" style="white-space:pre-wrap;" for="customCheck1"><?= $taskData['name'] ?></label>
               </div>
+
+              <div class="buttons d-flex justify-content-around">
+
+              <a class="btn btn-outline-info"  type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=checked" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">V</a>
               
       <?php $taskCounter++; } ?>
 
-            <div class="buttons d-flex justify-content-around">
-
-              <a class="btn btn-outline-info"  type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=checked" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">V</a>
+            
 
               <a class="btn btn-danger ms-1"  type="submit" href="inc/delete.php?id=<?= $taskData['id']?>" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">X</a>
             </div>
