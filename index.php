@@ -5,15 +5,8 @@
 
 
 
-  <div class="add-task-container">
-    <form class="col-12 d-flex justify-content-center"  method="post" autocomplet="off" action="inc/add.php">
-        
-          <input type="text" placeholder="ajouter une tâche" name="newtask" class="form-control">
-        
-          <button type="submit" class="btn btn-info ms-1" style="font-size:15px; color:white; font-weight:bold;"><span>&#43;</span></button>
-        
-    </form>
-  </div>
+<?php require 'inc/addTask.php' ?>
+
       <div class="tasks_container">
       <?php $taskCounter=0 ?>
 
@@ -32,7 +25,6 @@
 
               <div class="buttons d-flex justify-content-around">
 
-             
               <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=nochecked"><ion-icon name="checkmark-circle" size="large"></ion-icon></a>
 
             <?php } else { ?>
@@ -43,7 +35,6 @@
               </div>
 
               <div class="buttons d-flex justify-content-around">
-
              
               <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=checked"><ion-icon size="large" name="checkmark-circle-outline"></ion-icon></a>
               

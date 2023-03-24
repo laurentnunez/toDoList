@@ -20,7 +20,9 @@
     //A TERMINER
     //Algorythme permettant d'afficher un message s'il n'y a aucune tâche
     if(!$tasksList){
-        echo "Pas de tâches";
+        require 'inc/addTask.php';
+        echo "Vous n'avez pas de tâches en cours...";
+        require 'inc/footer.php';
         exit;
     }
 ?>
