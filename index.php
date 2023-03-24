@@ -40,10 +40,11 @@
       <?php $taskCounter++; } ?>
 
             <div class="buttons d-flex justify-content-around">
+ 
+              <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=checked"><ion-icon size="large" name="checkmark-circle"></ion-icon></a>
 
-              <a class="btn btn-outline-info"  type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=checked" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">V</a>
+              <a class="btn" style="color:red; padding:0px;" type="submit" href="inc/delete.php?id=<?= $taskData['id']?>" ><ion-icon size="large" name="trash-bin"></ion-icon></a>
 
-              <a class="btn btn-danger ms-1"  type="submit" href="inc/delete.php?id=<?= $taskData['id']?>" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">X</a>
             </div>
           </form>
         <?php } ?>
