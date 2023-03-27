@@ -6,8 +6,8 @@
           <button type="submit" class="btn btn-info ms-1" style="font-size:17px; color:white; font-weight:bold;"><span>&#43;</span></button>   
       </div>
           
-            <select class="form-select" aria-label=".form-select-sm example">
-            <option selected>sélection la priorité</option>
+            <select name="priority" class="form-select form-select-sm" style="margin-top:0.5rem;" aria-label=".form-select">
+            <option selected>sélectionez la priorité</option>
                   <option value="1">Haute</option>
                   <option value="2">Normale</option>
                   <option value="3">Faible</option>

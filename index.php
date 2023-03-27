@@ -26,7 +26,7 @@
                 
               <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=nochecked"><ion-icon name="checkmark-circle" size="large"></ion-icon></a>
 
-                <label class="custom-control-label checked" style="white-space:pre-wrap;" for="autoSizingInput"><?= $taskData['name'] ?></label>
+                <label class="task custom-control-label checked" style="white-space:pre-wrap;" for="autoSizingInput"><?= $taskData['name'] ?></label>
 
               </div>
 
@@ -40,23 +40,27 @@
 
               <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=checked"><ion-icon size="large" name="checkmark-circle-outline"></ion-icon></a>
 
-                <input type="text" name="task" style="border:none; font-size:0.8rem;" class="form-control col-10" value="<?= $taskData['name'] ?>">
+                <input type="text" name="taskname" style="border:none; font-size:0.8rem;" class="task form-control col-10" value="<?= $taskData['name'] ?>">
 
-                <?php if($taskData['id_priority']== 1){?>
-                  <span class="badge rounded-pill text-bg-danger" style="font-size:10px; height:13px;"> </span>
-
-                <?php } if($taskData['id_priority']== 2){?>
-                  <span class="badge rounded-pill text-bg-warning" style="font-size:10px; height:13px;"> </span>
-
-                <?php } if($taskData['id_priority']== 3) {?>
-                  <span class="badge rounded-pill text-bg-success" style="font-size:10px; height:13px;"> </span>
-                <?php }?>  
+                 
 
               </div>
 
-              <div class="buttons d-flex justify-content-around">
+              <div class="buttons d-flex justify-content-around d-flex align-items-center">
 
-              <a class="btn" style="color:purple; padding:0px;" type="submit" href="inc/save.php?id=<?= $taskData['id']?>&action=save"><ion-icon name="save-outline" size="large"></ion-icon></a>
+              <?php if($taskData['id_priority']== 1){?>
+                  <span class="badge rounded-pill text-bg-danger" style="font-size:10px; height:13px; margin-right:0.5rem;"> </span>
+
+                <?php } if($taskData['id_priority']== 2){?>
+                  <span class="badge rounded-pill text-bg-warning" style="font-size:10px; height:13px; margin-right:0.5rem;"> </span>
+
+                <?php } if($taskData['id_priority']== 3) {?>
+                  <span class="badge rounded-pill text-bg-success" style="font-size:10px; height:13px; margin-right:0.5rem;"> </span>
+                <?php }?> 
+
+              <a class="btn" style="color:purple; padding:0px;" type="submit" href=""><ion-icon name="save-outline" size="large"></ion-icon></a>
+
+              
               
       <?php $taskCounter++; } ?>
 
