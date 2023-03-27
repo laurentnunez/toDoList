@@ -6,7 +6,7 @@
     //On indique la requête qu'on souhaite lancer
     //On récupère tous les enregistrements depuis la table "tasks"
     //Les enregistrements seront classés par date de création (de la plus récente à la plus ancienne)
-    $sql = "SELECT*FROM `tasks` ORDER BY `created_at` DESC";
+    $sql = "SELECT*FROM `tasks` ORDER BY `id_priority` ASC";
 
     //On exécute la requête et on récupère au format PDOStatement le jeu de résultats
     $pdoStatement = $pdo->query( $sql );

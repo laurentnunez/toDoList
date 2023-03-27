@@ -14,11 +14,15 @@
         <?php foreach ($tasksList as $taskData) { ?>
           
           <!--On affiche les taches dans une liste-->   
-          <form class="task alert alert-light d-flex justify-content-between" role="alert" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 8px;">
+          
+          <form class="task alert alert-light d-flex justify-content-between d-flex align-content-center" role="alert" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+
+          
+
 
           <?php 
             if($taskData['status']== 2){?>
-              <div class="task-data">
+              <div class="task-data d-flex align-content-center">
                 
               <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=nochecked"><ion-icon name="checkmark-circle" size="large"></ion-icon></a>
 
@@ -32,31 +36,41 @@
 
               
             <?php } else { ?>
-            
               <div class="task-data">
-               
-                <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=checked"><ion-icon size="large" name="checkmark-circle-outline"></ion-icon></a>
 
-                <input type="text" name="task" for="autoSizingInput" style="border:none;font-size:14px;" class="form-control" value="<?= $taskData['name'] ?>">
+              <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=checked"><ion-icon size="large" name="checkmark-circle-outline"></ion-icon></a>
+
+                <input type="text" name="task" style="border:none; font-size:0.8rem;" class="form-control col-10" value="<?= $taskData['name'] ?>">
+
+                <?php if($taskData['id_priority']== 1){?>
+                  <span class="badge rounded-pill text-bg-danger" style="font-size:10px; height:13px;"> </span>
+
+                <?php } if($taskData['id_priority']== 2){?>
+                  <span class="badge rounded-pill text-bg-warning" style="font-size:10px; height:13px;"> </span>
+
+                <?php } if($taskData['id_priority']== 3) {?>
+                  <span class="badge rounded-pill text-bg-success" style="font-size:10px; height:13px;"> </span>
+                <?php }?>  
 
               </div>
 
               <div class="buttons d-flex justify-content-around">
 
-              <a class="btn" style="color:purple; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=nochecked"><ion-icon name="save" size="large"></ion-icon></a>
+              <a class="btn" style="color:purple; padding:0px;" type="submit" href="inc/save.php?id=<?= $taskData['id']?>&action=save"><ion-icon name="save-outline" size="large"></ion-icon></a>
               
       <?php $taskCounter++; } ?>
 
           
+              <a class="btn" action="inc/delete.php" style="color:red; padding:0px;" type="submit" href="inc/delete.php?id=<?= $taskData['id']?>" ><ion-icon size="large" name="close"></ion-icon></a>
 
-              <a class="btn" style="color:red; padding:0px;" type="submit" href="inc/delete.php?id=<?= $taskData['id']?>" ><ion-icon size="large" name="close-circle"></ion-icon></a>
+
 
             </div>
           </form>
         <?php } ?>
       </div>
       <div class="tasks-counter">           
-        <span class="badge text-bg-warning" style="font-size:16px;"><?=$taskCounter ?></span>
+        <h4><span class="badge text-bg-warning"><?=$taskCounter ?></span></h4>
       </div>
        
  <?php require 'inc/footer.php'?>
