@@ -20,29 +20,36 @@
             if($taskData['status']== 2){?>
               <div class="task-data">
                 
-                <label class="custom-control-label checked" style="white-space:pre-wrap;" for="customCheck1"><?= $taskData['name'] ?></label>
+              <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=nochecked"><ion-icon name="checkmark-circle" size="large"></ion-icon></a>
+
+                <label class="custom-control-label checked" style="white-space:pre-wrap;" for="autoSizingInput"><?= $taskData['name'] ?></label>
+
               </div>
 
               <div class="buttons d-flex justify-content-around">
 
-              <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=nochecked"><ion-icon name="checkmark-circle" size="large"></ion-icon></a>
+              
 
+              
             <?php } else { ?>
             
               <div class="task-data">
-                
-                <label class="custom-control-label" style="white-space:pre-wrap;" for="customCheck1"><?= $taskData['name'] ?></label>
+               
+                <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=checked"><ion-icon size="large" name="checkmark-circle-outline"></ion-icon></a>
+
+                <input type="text" name="task" for="autoSizingInput" style="border:none;font-size:14px;" class="form-control" value="<?= $taskData['name'] ?>">
+
               </div>
 
               <div class="buttons d-flex justify-content-around">
-             
-              <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=checked"><ion-icon size="large" name="checkmark-circle-outline"></ion-icon></a>
+
+              <a class="btn" style="color:purple; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=nochecked"><ion-icon name="save" size="large"></ion-icon></a>
               
       <?php $taskCounter++; } ?>
 
           
 
-              <a class="btn" style="color:red; padding:0px;" type="submit" href="inc/delete.php?id=<?= $taskData['id']?>" ><ion-icon size="large" name="trash-bin"></ion-icon></a>
+              <a class="btn" style="color:red; padding:0px;" type="submit" href="inc/delete.php?id=<?= $taskData['id']?>" ><ion-icon size="large" name="close-circle"></ion-icon></a>
 
             </div>
           </form>
