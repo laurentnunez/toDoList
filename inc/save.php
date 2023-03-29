@@ -25,6 +25,8 @@ if (isset($_POST["taskname"])) {
     die("ça n'a pas marché :(");
     };
     header("Location: ../index.php");
+}else {
+    header("Location: ../index.php");
 }
 
 ?>
