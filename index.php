@@ -17,9 +17,6 @@
           
           <form class="task alert alert-light d-flex justify-content-between d-flex align-content-center" role="alert" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
 
-          
-
-
           <?php 
             if($taskData['status']== 2){?>
               <div class="task-data d-flex align-content-center">
@@ -31,18 +28,13 @@
               </div>
 
               <div class="buttons d-flex justify-content-around">
-
-              
-
               
             <?php } else { ?>
               <div class="task-data">
 
               <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=checked"><ion-icon size="large" name="checkmark-circle-outline"></ion-icon></a>
 
-                <input type="text" name="taskname" style="border:none; font-size:0.8rem;" class="task form-control col-10" value="<?= $taskData['name'] ?>">
-
-                 
+                <input type="text" name="taskname" style="border:none; font-size:0.8rem;" class="task form-control col-10" value="<?= $taskData['name'] ?>">             
 
               </div>
 
@@ -58,14 +50,14 @@
                   <span class="badge rounded-pill text-bg-success" style="font-size:10px; height:13px; margin-right:0.5rem;"> </span>
                 <?php }?> 
 
-              <a class="btn" style="color:purple; padding:0px;" type="submit" href=""><ion-icon name="save-outline" size="large"></ion-icon></a>
+              <a class="btn" style="color:purple; padding:0px;" type="submit" href="inc/save.php?id=<?= $taskData['id']?>"><ion-icon name="save-outline" size="large"></ion-icon></a>
 
               
               
       <?php $taskCounter++; } ?>
 
           
-              <a class="btn" action="inc/delete.php" style="color:red; padding:0px;" type="submit" href="inc/delete.php?id=<?= $taskData['id']?>" ><ion-icon size="large" name="close"></ion-icon></a>
+              <a class="btn" style="color:red; padding:0px;" type="submit" href="inc/delete.php?id=<?= $taskData['id']?>"><ion-icon size="large" name="close"></ion-icon></a>
 
 
 

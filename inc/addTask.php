@@ -1,7 +1,7 @@
 <div class="add-task-container">
     <form class="col-12 d-flex justify-content-center flex-column"  method="post" autocomplet="off" action="inc/add.php">
     <div class="d-flex">
-          <input type="text" placeholder="ajouter une tâche" name="newtask" class="form-control">
+          <input type="text" placeholder="ajoutez une tâche" name="newtask" class="form-control">
         
           <button type="submit" class="btn btn-info ms-1" style="font-size:17px; color:white; font-weight:bold;"><span>&#43;</span></button>   
       </div>

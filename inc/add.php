@@ -10,13 +10,13 @@ if(isset($_POST["newtask"]) or isset($_POST["priority"])){
       $priority = ($_POST["priority"]);
 
       require '../inc/connect.php';
-      $sql = "INSERT INTO `tasks` (`name`,`status`, `id_priority`) VALUES (:title , :active, :priority)"; 
+      $sql = "INSERT INTO `tasks` (`name`,`status`, `id_priority`) VALUES (:name , :active, :priority)"; 
 
       //On prépare la requête
       $query = $pdo->prepare($sql);
   
       //On ajoute les valeurs
-      $query->bindValue(":title", $name, PDO::PARAM_STR);
+      $query->bindValue(":name", $name, PDO::PARAM_STR);
       $query->bindValue(":active", $active, PDO::PARAM_STR);
       $query->bindValue(":priority", $priority, PDO::PARAM_STR);
 

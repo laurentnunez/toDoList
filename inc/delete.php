@@ -1,7 +1,7 @@
 <?php
  
  require_once '../inc/connect.php';
-  var_dump ($_GET);
+  //var_dump ($_GET);
   
   $sql = "DELETE FROM `tasks` WHERE `id`= :id";
 
