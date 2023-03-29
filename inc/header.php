@@ -16,5 +16,5 @@
     
   </head>
   <body>
-    <div class="main-section bg-info" style="min-height:92vh">
+    <div class="main-section bg-info" style="min-height:100vh">
       <h1 class="text-white text-center pt-2" style="font-weight:lighter ; font-size:50px ; font-family:'Pacifico', cursive" >toDoList</h1>

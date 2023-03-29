@@ -23,7 +23,7 @@
                 
           <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=nochecked"><ion-icon name="checkmark-circle" size="large"></ion-icon></a>
 
-          <label class="task custom-control-label checked" style="white-space:pre-wrap; padding-left:1rem;" for="autoSizingInput"><?= $taskData['name'] ?></label>
+          <label class="task custom-control-label checked" style="white-space:pre-wrap; padding-left:0.7rem;" for="autoSizingInput"><?= $taskData['name'] ?></label>
         </div>
 
         <div class="buttons d-flex justify-content-around">
@@ -33,7 +33,7 @@
 
           <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=checked"><ion-icon size="large" name="checkmark-circle-outline"></ion-icon></a>
 
-          <input type="text" name="taskname"  style="border:none" class="form-control form-control-sm" value="<?= $taskData['name'] ?>">             
+          <input type="text" name="taskname"  style="border:none;padding-bottom:0.5rem;" class="form-control form-control-sm" value="<?= $taskData['name'] ?>">             
 
         </div>
 
