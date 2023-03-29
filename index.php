@@ -33,7 +33,7 @@
 
           <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=checked"><ion-icon size="large" name="checkmark-circle-outline"></ion-icon></a>
 
-          <input type="text" name="taskname" style="border:none;" class="task form-control" value="<?= $taskData['name'] ?>">             
+          <input type="text" name="taskname"  style="border:none" class="form-control form-control-sm" value="<?= $taskData['name'] ?>">             
 
         </div>
 
