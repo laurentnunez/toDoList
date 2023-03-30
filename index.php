@@ -1,11 +1,14 @@
-<?php require 'inc/header.php'?>
-<?php require 'inc/connect.php' ?>
-<?php require 'inc/list.php' ?>
-<?php require 'inc/add.php' ?>
+<?php 
+session_start();
+//var_dump($_SESSION);
 
+  require 'inc/header.php';
+  require 'inc/connect.php'; 
+  require 'inc/list.php'; 
+  require 'inc/add.php'; 
+  require 'inc/addTask.php';
+?>
 
-
-<?php require 'inc/addTask.php' ?>
 
 <div class="tasks_container">
   <?php $taskCounter=0 ?>
@@ -62,5 +65,6 @@
     </div>
     <div class="tasks-counter">           
       <h4><span class="badge text-bg-warning"><?=$taskCounter ?></span></h4>
+      <button class="disconnect btn btn-success">Déconnexion</button>
     </div>
 <?php require 'inc/footer.php'?>

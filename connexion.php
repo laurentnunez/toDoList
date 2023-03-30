@@ -24,7 +24,7 @@
 
 
       $user = $query->fetch();
-      
+      var_dump($user);
 
       if(!$user){
         die("L'utilisateur et/ou le mot de passe est incorrect !");
@@ -39,6 +39,11 @@
 
 
       //username et password sont donc ok
+      session_start();
+      $_SESSION["user"]=[
+        "pseudo" => $user["username"],
+      ];
+      //var_dump($_SESSION);
 
     }
     else{
