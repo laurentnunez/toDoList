@@ -3,7 +3,7 @@
   background-color: rgb(248, 248, 248);
   border-radius: 8px;
   padding: 1rem 1rem 1rem 1rem;
-  margin: 1rem 45rem 1rem 45rem;
+  margin: 1rem 40rem 1rem 40rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
@@ -11,22 +11,20 @@
 background-color: rgb(248, 248, 248);
 border-radius: 8px;
 padding: 1rem;
-margin: 5rem 35rem 1rem 35rem;
+margin: 3rem 40rem 1rem 40rem;
 box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
 
 }
 
 .disconnect{
-  position:fixed;
-  top: 0.1;
-  right:35rem;
+  
 }
 
 .tasks-counter{
   position:fixed;
   top:0.5rem;
-  right: 7rem;
+  left: 20rem;
   width:30%;
   background-color: transparent;
 }
@@ -60,9 +58,7 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px
   .tasks_container , .add-task-container {
   margin: 1rem 15rem 1rem 15rem;
   }
-  .tasks-counter{
-    right: 2rem;
-  }
+  
   .user-container {
     margin: 5rem 25rem 1rem 25rem;
   }
@@ -84,9 +80,6 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px
     font-size: 12px;
   }
 
-  .tasks-counter{
-    right: -4rem;
-  }
 
   .user-container {
     margin: 5rem 10rem 1rem 10rem;

@@ -65,6 +65,6 @@ session_start();
     </div>
     <div class="tasks-counter">           
       <h4><span class="badge text-bg-warning"><?=$taskCounter ?></span></h4>
-      <button class="disconnect btn btn-success">Déconnexion</button>
+      
     </div>
 <?php require 'inc/footer.php'?>
