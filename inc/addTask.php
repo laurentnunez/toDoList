@@ -1,12 +1,12 @@
 <div class="add-task-container">
     <form class="col-12 d-flex justify-content-center flex-column"  method="post" autocomplet="off" action="inc/add.php">
     
-          <input type="text" placeholder="ajoutez une tâche" name="newtask" class="form-control">
+          <input type="text" placeholder="ajoutez une tâche" name="newtask" class="form-control" required=required>
           
           <div class="d-flex">  
           
             <select name="priority" class="form-select form-select-sm" style="margin-top:0.5rem;" aria-label=".form-select">
-            <option selected>sélectionez la priorité</option>
+            <option selected></option>
                   <option value="1">Haute</option>
                   <option value="2">Normale</option>
                   <option value="3">Faible</option>
@@ -17,4 +17,4 @@
     </form>
     
   </div>
-  <button class="disconnect btn btn-success">Déconnexion</button>
+  

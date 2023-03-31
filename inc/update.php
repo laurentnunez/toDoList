@@ -1,5 +1,5 @@
 <?php
- require_once '../inc/connect.php';
+ require_once '../inc/db_connect.php';
  //var_dump ($_GET);
 
  if($_GET["action"]=== "checked") {
@@ -25,7 +25,7 @@
     if(!$query->execute()){
         die("ça n'a pas marché :(");
       };
-    header("Location: ../index.php");
+    header("Location: ../app.php");
 
  }
  }

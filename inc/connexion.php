@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST["username"]) && isset($_POST["password"])) {
     //connexion à la base
-    require_once 'inc/connect.php';
+    require_once 'db_connect.php';
 
     //vérification de l'username et du mot de passe
     $sql = "SELECT * FROM `user` WHERE `login_user` = :username";
@@ -27,10 +27,10 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
 
         $_SESSION["user"] = $user["login_user"];
         
-        header("Location: ../index.php");
+        header("Location: ../app.php");
         //var_dump($_SESSION["user"]);
     }else {
-      die("password PAS OK");
+      die("L'utilisateur et/ou le mot de passe est incorrect !");
     }
 }
 ?>

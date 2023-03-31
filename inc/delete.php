@@ -1,6 +1,6 @@
 <?php
  
- require_once '../inc/connect.php';
+ require_once '../inc/db_connect.php';
   //var_dump ($_GET);
   
   $sql = "DELETE FROM `tasks` WHERE `id`= :id";
@@ -11,6 +11,6 @@
     die("ça n'a pas marché :(");
   };
 
-  header("Location: ../index.php");
+  header("Location: ../app.php");
   
 ?>

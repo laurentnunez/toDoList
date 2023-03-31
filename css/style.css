@@ -17,14 +17,10 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px
 
 }
 
-.disconnect{
-  
-}
-
 .tasks-counter{
   position:fixed;
   top:0.5rem;
-  left: 20rem;
+  right: 8rem;
   width:30%;
   background-color: transparent;
 }
@@ -62,13 +58,13 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px
   .user-container {
     margin: 5rem 25rem 1rem 25rem;
   }
+
+  .tasks-counter{
+    right:3rem;
+  }
+
 }
 
-@media screen and (max-width:1200px){
-  .user-container {
-    margin: 5rem 20rem 1rem 20rem;
-  }
-}
 
 
 @media screen and (max-width:798px){
@@ -80,9 +76,12 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px
     font-size: 12px;
   }
 
-
   .user-container {
     margin: 5rem 10rem 1rem 10rem;
+  }
+
+  .tasks-counter{
+    right:0rem;
   }
 
 }
@@ -96,6 +95,10 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px
 
   .user-container {
     margin: 5rem 2rem 1rem 2rem;
+  }
+
+  .tasks-counter{
+    right:-4rem;
   }
 
 }

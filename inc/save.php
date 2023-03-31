@@ -4,7 +4,7 @@ if (isset($_POST["taskname"])) {
     $name= strip_tags($_POST["taskname"]);
     $id = ($_POST["save-button"]);
 
-    require_once '../inc/connect.php';
+    require_once '../inc/db_connect.php';
 
     //$name = $_GET['name'];
     //var_dump($id);
@@ -24,9 +24,9 @@ if (isset($_POST["taskname"])) {
    if (!$query->execute()) {
     die("ça n'a pas marché :(");
     };
-    header("Location: ../index.php");
+    header("Location: ../app.php");
 }else {
-    header("Location: ../index.php");
+    header("Location: ../app.php");
 }
 
 ?>

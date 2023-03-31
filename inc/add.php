@@ -3,13 +3,13 @@
 //AJOUTER UNE TACHE DANS LA BASE DE DONNÉES  
 if(isset($_POST["newtask"]) or isset($_POST["priority"])){
 
-  if(!empty($_POST["newtask"]) and !empty($_POST["priority"])){
+  if(!empty($_POST["newtask"]) && !empty($_POST["priority"])){
 
       $name= strip_tags($_POST["newtask"]);
       $active = 1;
       $priority = ($_POST["priority"]);
 
-      require '../inc/connect.php';
+      require '../inc/db_connect.php';
       $sql = "INSERT INTO `tasks` (`name`,`status`, `id_priority`) VALUES (:name , :active, :priority)"; 
 
       //On prépare la requête
@@ -25,14 +25,14 @@ if(isset($_POST["newtask"]) or isset($_POST["priority"])){
       die("ça n'a pas marché :(");
     };
 
-     header("Location: ../index.php");
+     header("Location: ../app.php");
 
     } 
 
     else {
-      die("Le formulaire est vide");
+      die("Le formulaire est incomplet !");
     }
-    header("Location: ../index.php");
+    header("Location: ../app.php");
   }
     
 
