@@ -23,7 +23,7 @@ session_start();
     <!--On affiche les taches dans une liste-->   
     
     
-      <form class="callout callout-warning d-flex justify-content-between"
+      <form class="callout callout-warning d-flex justify-content-between" method="post" action="inc/save.php"
         <?php if($taskData['id_priority']== 1){?>
         style="border-left-color:#d9534f;"
         
@@ -40,7 +40,7 @@ session_start();
                 
           <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=nochecked"><ion-icon name="checkmark-circle" size="large"></ion-icon></a>
 
-          <label class="task custom-control-label checked" style="white-space:pre-wrap; padding-left:0.7rem;" for="autoSizingInput"><?= $taskData['name'] ?></label>
+          <label class="task custom-control-label checked" for="autoSizingInput"><?= $taskData['name'] ?></label>
         </div>
 
         <div class="buttons d-flex justify-content-around">
@@ -50,7 +50,7 @@ session_start();
 
           <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=checked"><ion-icon size="large" name="checkmark-circle-outline"></ion-icon></a>
 
-          <input type="text" name="taskname"  style="border:none;" class="task form-control" value="<?= $taskData['name'] ?>">             
+          <input type="text" name="taskname"  style="border:none; padding-bottom: 0.7rem;" class="task form-control" value="<?= $taskData['name'] ?>">             
 
         </div>
 
@@ -67,10 +67,16 @@ session_start();
   <?php } ?>
     </div>
     <div class="tasks-counter">           
-      <h4><span class="badge text-bg-warning"><?=$taskCounter ?></span></h4>
+      <h4><span class="badge" style="color:black;background-color:#FFD717;"><?=$taskCounter ?></span></h4>
     </div>
     <form class="disconnect_button d-flex justify-content-center" method="post" action="inc/deconnexion.php">
-      <button class="disconnect btn btn-danger" style="margin-bottom:1rem;">Déconnexion</button>
+      <button class="disconnect btn" style="margin-bottom:1rem;background-color:#FFD717;">Déconnexion</button>
     </form>
     
-<?php require 'inc/footer.php'?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> 
+  </div>
+
+    <footer class="footer" style="font-style: italic; font-weight: bold; text-align: right; padding-right:0; background-color:#FFD717;" >Developped by Laurent &copy; 2023
+    </footer>
+  </body> 
+</html>

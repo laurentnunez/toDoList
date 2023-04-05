@@ -12,7 +12,7 @@
                   <option value="3">Faible</option>
       
             </select>
-            <button type="submit" class="btn btn-info ms-1" style="font-size:16px; color:white; font-weight:bold; margin-top:0.5rem;"><span>&#43;</span></button>
+            <button type="submit" class="btn ms-1" style="font-size:16px; font-weight:bold; margin-top:0.5rem;background-color:#FFD717;"><span>&#43;</span></button>
             </div>
     </form>
     
