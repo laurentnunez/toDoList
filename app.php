@@ -50,7 +50,7 @@ session_start();
 
           <a class="btn" style="color:green; padding:0px;" type="submit" href="inc/update.php?id=<?= $taskData['id']?>&action=checked"><ion-icon size="large" name="checkmark-circle-outline"></ion-icon></a>
 
-          <input type="text" name="taskname"  style="border:none; padding-bottom: 0.7rem;" class="task form-control" value="<?= $taskData['name'] ?>">             
+          <input type="text" name="taskname"  style="border:none; padding-bottom: 0.7rem;" class="task" value="<?= $taskData['name'] ?>">             
 
         </div>
 
@@ -70,7 +70,7 @@ session_start();
       <h4><span class="badge" style="color:black;background-color:#FFD717;"><?=$taskCounter ?></span></h4>
     </div>
     <form class="disconnect_button d-flex justify-content-center" method="post" action="inc/deconnexion.php">
-      <button class="disconnect btn" style="margin-bottom:1rem;background-color:#FFD717;">Déconnexion</button>
+      <button class="disconnect btn" style="margin-bottom:1rem;font-weight:bold;background-color:#FFD717;">Déconnexion</button>
     </form>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> 
