@@ -12,7 +12,7 @@
     if(!$query->execute()){
         die("ça n'a pas marché :(");
       };
-    header("Location: ../index.php");
+    header("Location: ../app.php");
 
  }else{
   if($_GET["action"]=== "nochecked") {
