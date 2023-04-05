@@ -2,7 +2,7 @@
 .tasks_container , .add-task-container {
   background-color: rgb(248, 248, 248);
   border-radius: 8px;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem;
   margin: 1rem 40rem 1rem 40rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
@@ -17,6 +17,17 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px
 
 }
 
+.callout-warning{
+  background-color: rgb(255, 255, 255);
+  padding: 0.5rem 0.2rem;
+  margin: 1rem 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  
+}
+
 .tasks-counter{
   position:fixed;
   top:0.5rem;
@@ -28,6 +39,7 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px
 .task {
   font-size: 16px;
   padding-bottom: 0.5rem;
+  
 }
 
 .task-data {
@@ -102,6 +114,8 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px
   }
 
 }
+
+
 
 .checked {
   color: #999 !important;
